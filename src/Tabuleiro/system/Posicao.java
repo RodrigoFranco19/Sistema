@@ -34,6 +34,4 @@ public void SetValues(int linha , int coluna) {
 	this.linha = linha;
 	this.coluna = coluna;
 }
-
-
 }
