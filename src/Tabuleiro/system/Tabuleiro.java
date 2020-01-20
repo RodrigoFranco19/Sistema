@@ -2,29 +2,37 @@ package Tabuleiro.system;
 
 public class Tabuleiro {
 
-	private int linhas;
-	private int colunas;
+	private int linha;
+	private int coluna;
 	private Peca [][]pcs;
 
-	public Tabuleiro(int linhas, int colunas) {
-		this.linhas = linhas;
-		this.colunas = colunas;
-		pcs = new Peca[linhas][colunas];
+	public Tabuleiro(int linha, int coluna) {
+		this.linha = linha;
+		this.coluna = coluna;
+		pcs = new Peca[linha][coluna];
 	}
 	
-	public int getLinhas() {
-		return linhas;
+	public int getLinha() {
+		return linha;
 	}
 
-	public void setLinhas(int linhas) {
-		this.linhas = linhas;
+	public void setLinha(int linha) {
+		this.linha = linha;
 	}
 
-	public int getColunas() {
-		return colunas;
+	public int getColuna() {
+		return coluna;
 	}
 
-	public void setColunas(int colunas) {
-		this.colunas = colunas;
+	public void setColuna(int coluna) {
+		this.coluna = coluna;
+	}
+
+	public Peca piece(int linha,int coluna) {
+		return pcs[linha][coluna];
+	}
+
+	public Peca piece(Posicao pos) {
+		return pcs[pos.getLinha()][pos.getColuna()];
 	}
 }
