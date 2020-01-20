@@ -23,7 +23,12 @@ public class Partida {
 		return mat;
 	}
 	
+	private void PlaceNewPiece(char coluna , int linha, Xadrez_Peca pc) {
+		tab.PlacePiece(pc, new Xadrez_Posicao(coluna,linha).toPosition());
+	}
+	
+	
 	private void InicialSetUp() {
-		tab.PlacePiece(new Torre(tab,Cor.WHITE) , new Posicao(1,1));
+		PlaceNewPiece('b',6,new Torre(tab, Cor.WHITE));
 	}
 }
