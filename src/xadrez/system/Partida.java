@@ -1,5 +1,7 @@
 package xadrez.system;
 
+import Peças_Xadrez.*;
+import Tabuleiro.system.Posicao;
 import Tabuleiro.system.Tabuleiro;
 
 public class Partida {
@@ -8,6 +10,7 @@ public class Partida {
 	
 	public Partida() {
 		tab = new Tabuleiro(8,8);
+		InicialSetUp();
 	}
 	
 	public static Xadrez_Peca[][] getPieces(){
@@ -18,5 +21,10 @@ public class Partida {
 				mat[i][j] = (Xadrez_Peca) tab.piece(i, j);
 			}}
 		return mat;
+	}
+	
+	private void InicialSetUp() {
+		tab.PlacePiece(new Rei(tab, Cor.WHITE), new Posicao(0,2));
+		tab.PlacePiece(new Torre(tab,Cor.BLACK), new Posicao(0,0));
 	}
 }
