@@ -2,11 +2,11 @@ import xadrez.system.Xadrez_Peca;
 
 public class Interface {
 
-	public static void imprimir(Xadrez_Peca[][] pcs) {
-		for(int x = 0 ; x < pcs.length ; x++) {
+	public static void imprimir(Xadrez_Peca[][] pieces) {
+		for(int x = 0 ; x < pieces.length ; x++) {
 			System.out.print((8 - x) + " ");
-			for(int y = 0 ; y < pcs.length ; y++) {
-				ImprimirPeca(pcs[x][y]);
+			for(int y = 0 ; y < pieces.length ; y++) {
+				ImprimirPeca(pieces[x][y]);
 			}
 			System.out.println();
 		}
@@ -15,7 +15,7 @@ public class Interface {
 	
 	private static void ImprimirPeca(Xadrez_Peca piece) {
 		if(piece == null) {
-			System.out.println("-");
+			System.out.print("-");
 		}else {
 			System.out.print(piece);
 		}
