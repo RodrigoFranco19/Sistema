@@ -24,7 +24,6 @@ public class Partida {
 	}
 	
 	private void InicialSetUp() {
-		tab.PlacePiece(new Rei(tab, Cor.WHITE), new Posicao(0,2));
-		tab.PlacePiece(new Torre(tab,Cor.BLACK), new Posicao(0,0));
+		tab.PlacePiece(new Torre(tab,Cor.WHITE) , new Posicao(1,1));
 	}
 }
