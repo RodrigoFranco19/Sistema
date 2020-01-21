@@ -1,7 +1,5 @@
 package Tabuleiro.system;
 
-import Peças_Xadrez.Torre;
-
 public class Tabuleiro {
 
 	private int linha;
@@ -58,7 +56,7 @@ public class Tabuleiro {
 	}
 	
 	public boolean TemPeca(Posicao pos) {
-		if(PosicaoExiste(pos)) {
+		if(!PosicaoExiste(pos)) {
 			throw new BoardException("A peca nao existe");
 		}
 		return piece(pos) != null;

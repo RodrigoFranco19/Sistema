@@ -1,8 +1,7 @@
 package xadrez.system;
 
 import Peças_Xadrez.*;
-import Tabuleiro.system.Posicao;
-import Tabuleiro.system.Tabuleiro;
+import Tabuleiro.system.*;
 
 public class Partida {
 
@@ -27,8 +26,23 @@ public class Partida {
 		tab.PlacePiece(pc, new Xadrez_Posicao(coluna,linha).toPosition());
 	}
 	
-	
 	private void InicialSetUp() {
-		PlaceNewPiece('b',6,new Torre(tab, Cor.WHITE));
+		PlaceNewPiece('a',8,new Torre(tab, Cor.WHITE));
+		PlaceNewPiece('b',8,new Cavalo(tab, Cor.WHITE));
+		PlaceNewPiece('c',8,new Bispo(tab,Cor.WHITE));
+		PlaceNewPiece('d',8,new Rainha(tab,Cor.WHITE));
+		PlaceNewPiece('e',8,new Rei(tab,Cor.WHITE));
+		PlaceNewPiece('f',8,new Bispo(tab,Cor.WHITE)); 
+		PlaceNewPiece('g',8,new Cavalo(tab,Cor.WHITE)); 
+		PlaceNewPiece('h',8,new Torre(tab,Cor.WHITE)); 
+
+		PlaceNewPiece('a',7,new Piao(tab,Cor.WHITE));
+		PlaceNewPiece('b',7,new Piao(tab,Cor.WHITE));
+		PlaceNewPiece('c',7,new Piao(tab,Cor.WHITE));
+		PlaceNewPiece('d',7,new Piao(tab,Cor.WHITE));
+		PlaceNewPiece('e',7,new Piao(tab,Cor.WHITE));
+		PlaceNewPiece('f',7,new Piao(tab,Cor.WHITE));
+		PlaceNewPiece('g',7,new Piao(tab,Cor.WHITE));
+		PlaceNewPiece('h',7,new Piao(tab,Cor.WHITE));
 	}
 }

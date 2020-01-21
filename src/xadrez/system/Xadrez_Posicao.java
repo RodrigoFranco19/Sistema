@@ -24,7 +24,7 @@ public class Xadrez_Posicao {
 	}
 	
 	protected Posicao toPosition() {
-		return new Posicao(8 - linha , coluna - 'a');
+		return new Posicao(8 - linha , coluna - 'a'); //'a' - 'a' = 0 || 'b' - 'a' = 1 || 'c' - 'a' = 2//
 	}
 	
 	protected static Xadrez_Posicao fromPosition(Posicao pos) {

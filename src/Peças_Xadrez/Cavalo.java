@@ -14,6 +14,4 @@ public class Cavalo extends Xadrez_Peca{
 	public String toString() {
 		return "C";
 	}
-	
-	
 }
